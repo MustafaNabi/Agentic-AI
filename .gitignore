@@ -1,0 +1,11 @@
+#Exclude directories
+virtualenv/
+.env/
+
+#Exclude environment file
+.env
+
+
+# IDEs
+.vscode/
+.idea/
