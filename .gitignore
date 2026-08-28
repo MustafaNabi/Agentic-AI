@@ -9,3 +9,481 @@ virtualenv/
 # IDEs
 .vscode/
 .idea/
+
+# ============================================================
+# SECRETS & CREDENTIALS
+# ============================================================
+
+# Environment files
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
+
+# Secrets / credentials
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.crt
+*.cer
+*.der
+
+# SSH keys
+id_rsa
+id_rsa.*
+id_dsa
+id_dsa.*
+id_ecdsa
+id_ecdsa.*
+id_ed25519
+id_ed25519.*
+id_x25519
+id_x25519.*
+
+# Any SSH keys accidentally placed in project
+ssh_key
+ssh_key.*
+*_private_key
+*_private_key.*
+*_secret
+*_secret.*
+
+# Cloud credentials
+.aws/
+.gcloud/
+.azure/
+.kube/
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# GitHub CLI / authentication
+.github_token
+gh_token
+github_token
+
+# Generic credential files
+credentials
+credentials.*
+secrets
+secrets.*
+secret
+secret.*
+
+# ============================================================
+# PYTHON
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+
+# Type checking / linting caches
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ============================================================
+# NODE / JAVASCRIPT / TYPESCRIPT
+# ============================================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.npm/
+.yarn/
+.pnpm-store/
+
+# Build output
+.next/
+.nuxt/
+dist/
+build/
+out/
+
+# Vite
+.vite/
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage
+.nyc_output/
+coverage/
+
+# ============================================================
+# AI / ML / DATA SCIENCE
+# ============================================================
+
+# Model files
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+*.gguf
+*.ggml
+
+# Large datasets
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Local vector databases / indexes
+chroma/
+chroma_db/
+.chromadb/
+vector_db/
+vectordb/
+faiss_index/
+*.faiss
+
+# Local model/cache directories
+models/
+model/
+checkpoints/
+weights/
+
+# Hugging Face
+.cache/
+huggingface/
+.huggingface/
+
+# ML experiment tracking
+wandb/
+mlruns/
+runs/
+
+# ============================================================
+# AGENT / LLM LOCAL DATA
+# ============================================================
+
+# Local agent state
+.agent/
+.agent-data/
+agent_data/
+agent_state/
+.agent_state/
+
+# Local memory
+memory/
+.memories/
+agent_memory/
+
+# Prompt/debug traces
+traces/
+trace/
+debug_traces/
+
+# Local tool state
+.tool_state/
+tools_state/
+
+# Local RAG data
+rag_data/
+rag_cache/
+.embeddings/
+embeddings/
+
+# ============================================================
+# DATABASES
+# ============================================================
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Local database directories
+data/db/
+database/
+databases/
+
+# Redis dumps
+dump.rdb
+
+# ============================================================
+# LOGS & TEMPORARY FILES
+# ============================================================
+
+*.log
+*.log.*
+logs/
+log/
+tmp/
+temp/
+.tmp/
+.temp/
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.backup
+*.old
+
+# ============================================================
+# LOCAL DATA / GENERATED FILES
+# ============================================================
+
+# Be careful with this section.
+# Uncomment only if these directories contain generated/private data.
+
+# data/
+# uploads/
+# downloads/
+# generated/
+# outputs/
+
+# ============================================================
+# IDE / EDITORS
+# ============================================================
+
+# VS Code
+.vscode/
+!.vscode/settings.json.example
+
+# JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+.#*
+\#*\#
+
+# Sublime
+*.sublime-workspace
+*.sublime-project
+
+# ============================================================
+# OS FILES
+# ============================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+.Trash-*
+
+# ============================================================
+# DOCKER
+# ============================================================
+
+# Local Docker environment files
+docker-compose.override.yml
+docker-compose.local.yml
+
+# Docker secrets
+docker-secrets/
+secrets/
+
+# ============================================================
+# LOCAL CONFIGURATION
+# ============================================================
+
+# Local-only configuration
+config.local.*
+settings.local.*
+local.settings.*
+*.local.json
+*.local.yaml
+*.local.yml
+
+# ============================================================
+# TERRAFORM / INFRASTRUCTURE
+# ============================================================
+
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+
+# Keep examples
+!*.tfvars.example
+
+# Terraform crash logs
+crash.log
+crash.*.log
+
+# ============================================================
+# KUBERNETES
+# ============================================================
+
+# Local kube configs
+kubeconfig
+kubeconfig.*
+.kube/
+
+# ============================================================
+# CERTIFICATES / TLS
+# ============================================================
+
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+
+# ============================================================
+# PACKAGE MANAGERS
+# ============================================================
+
+# Python
+.pip-cache/
+pip-wheel-metadata/
+
+# Node
+.npm/
+.yarn/
+.pnpm-store/
+
+# ============================================================
+# GENERATED DOCUMENTATION / REPORTS
+# ============================================================
+
+# Uncomment if generated automatically
+# docs/_build/
+# reports/
+# reports/generated/
+
+# ============================================================
+# LOCAL DEVELOPMENT
+# ============================================================
+
+# Local server PID files
+*.pid
+*.pid.lock
+
+# Unix sockets
+*.sock
+
+# Local history
+.history/
+
+# ============================================================
+# SECURITY / SCANNING OUTPUT
+# ============================================================
+
+.bandit/
+.semgrep/
+.gitleaks/
+security-reports/
+security_report.*
+security-report.*
+
+# ============================================================
+# TEST ARTIFACTS
+# ============================================================
+
+test-results/
+test-results.*
+playwright-report/
+blob-report/
+.pytest_cache/
+
+# ============================================================
+# API / TOOL GENERATED FILES
+# ============================================================
+
+# Local API responses / exports
+api_responses/
+api_cache/
+.cache/
+.cache-data/
+
+# ============================================================
+# BACKUPS
+# ============================================================
+
+*.backup
+*.bak
+*.orig
+*.rej
+
+# ============================================================
+# PROJECT-SPECIFIC SECRET FILES
+# ============================================================
+
+# Common secret/config naming patterns
+*secret*.json
+*secret*.yaml
+*secret*.yml
+*credentials*.json
+*credentials*.yaml
+*credentials*.yml
+
+# Local config files
+config.json
+config.yaml
+config.yml
+
+# ============================================================
+# KEEP SAFE EXAMPLES
+# ============================================================
+
+# Allow example configuration files
+!*.example
+!*.sample
+!*.template
