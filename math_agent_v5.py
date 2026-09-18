@@ -33,29 +33,15 @@ async def main():
                     "parameters": tool.input_schema
                     },
                 })
-
         
         MAX_TRIES = 15
         model = "gemma4:e4b"
         options = {"num_ctx": 36864, "temperature": 0.5}
-        messages = [{"role": "system", "content": "You are a helpful assistent with expertise in complex mathematics. Assume the role of an mathematician. Be brief in response unless asked for verbose response"}]
-        system_response = ollama.chat(
-                model=model,
-                messages=messages,
-                options=options,
-                keep_alive="10m"
-                ) 
-        messages.append(system_response.message)
-        
+        system_prompt = "You are a helpful assistent with expertise in complex mathematics. Assume the role of an mathematician. Be brief in response unless asked for verbose response"
+        messages = [{"role": "system", "content": system_prompt}]
         message = input('Welcome to Calculator!!\nEnter "quit" to quit\nEnter "help" for help\n\nAsk your question: ')
-        messages.append({"role": "User", "content": message})
+               
         
-        
-        
-        #print(system_response.message)
-        #exit(0)
-
-
         while True:
            
             if message == "quit":
@@ -63,12 +49,11 @@ async def main():
                 exit(0)
             elif message == "help":
                 print('"Calculater" is an LLM based math tool that can do perform complex calculations\nEnter you math question in English\n\n')
-                print("Ask your Question: ")
-            
-
-
-
-            
+                message = input("Ask your Question: ")
+                continue
+            else:
+                messages.append({"role": "user", "content": message})
+                
             for tries in range(MAX_TRIES):
                 response = ollama.chat(
                     model=model,
@@ -82,7 +67,6 @@ async def main():
             
 
                 if not response.message.tool_calls:
-                    #print(f"Correct Answer obtained in {tries+1} steps.\n")
                     print(response.message.content, end="\n\n")
                     break
                 

@@ -23,10 +23,7 @@ def divide(a: float, b: float) -> float:
     """
     Divides two numbes and returns the result
     """
-    try:
-        return a / b
-    except ZeroDivisionError:
-        return f"Error: Division by zero, b = {b}"
+    return a / b
 
 
 @mcp.tool
