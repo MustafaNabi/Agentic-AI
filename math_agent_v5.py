@@ -81,7 +81,6 @@ async def main():
             else:
                 print(f"Answer could not be calculated in {MAX_TRIES} iterations\n\n")
             message = input("Ask your next Question: ")
-            messages.append({"role": "User", "content": message})
 
 if __name__ == "__main__":
     asyncio.run(main())
